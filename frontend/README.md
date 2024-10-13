@@ -1,4 +1,4 @@
-## Food Ordering App
+## Sustainable Platform App
 
 ### Features:
 
