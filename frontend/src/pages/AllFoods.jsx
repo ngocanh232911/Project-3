@@ -74,12 +74,12 @@ const AllFoods = () => {
             {/* Search Bar */}
             <Col lg="6" md="6" sm="6" xs="12">
               <div className="search__widget d-flex align-items-center justify-content-between">
-                <input
-                  type="text"
+                <input type="text"
                   placeholder="I'm looking for...."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                />
+                  onChange={(e) => setSearchTerm(e.target.value)}>
+                  </input>
+                 
                 <span onClick={() => console.log("Searching for: ", searchTerm)}>
                   <i className="ri-search-line"></i>
                 </span>

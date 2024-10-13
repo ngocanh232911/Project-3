@@ -13,6 +13,12 @@
   outline: none;
 }
 
+.container input {
+  opacity: 1;
+  height: 0;
+  width: 0;
+}
+
 @media only screen and (max-width: 768px) {
   .search__widget {
     width: 100%;
@@ -20,19 +26,23 @@
   }
   .search__widget input {
     width: 100%;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .sorting__widget select {
     width: 100% !important;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
 .search__widget input {
-  z-index: 1; /* Ensure input field is clickable */
-  width: 100%; /* Ensure it takes the available space */
+  z-index: 0; 
+  height: auto;
+  width: auto; 
+  size: 10px;
+  padding-left: 30px;
+  font-size: 20px;
 }
 
 .search__widget span {
-  z-index: 0; /* Make sure the icon doesn’t cover the input */
+  z-index: 0; 
 }
