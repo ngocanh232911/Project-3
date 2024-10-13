@@ -22,10 +22,10 @@ const nav__links = [
     display: "Cart",
     path: "/cart",
   },
-  {
-    display: "Contact",
-    path: "/contact",
-  },
+  // {
+  //   display: "Contact",
+  //   path: "/contact",
+  // },
 ];
 
 const Header = () => {
@@ -62,7 +62,7 @@ const Header = () => {
           <Link to ="/home">
           <div className="logo">
             <img src={logoTrojanGreen} height ="180" width = "200" alt="logo" />
-            <h5>Tasty Treat</h5>
+            <h5>Trojan Green</h5>
           </div>
           </Link>
           

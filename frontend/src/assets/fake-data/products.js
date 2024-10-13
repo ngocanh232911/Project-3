@@ -3,16 +3,16 @@
 // import product_01_image_02 from "../images/product_01.1.jpg";
 // import product_01_image_03 from "../images/product_01.3.jpg";
 
-import product_02_image_01 from "../images/product_2.1.jpg";
-import product_02_image_02 from "../images/product_2.2.jpg";
-import product_02_image_03 from "../images/product_2.3.jpg";
+import product_02_image_01 from "../images/Bananas.PNG";
+import product_02_image_02 from "../images/Carrots.PNG";
+import product_02_image_03 from "../images/Cucumbers.PNG";
 
-import product_03_image_01 from "../images/product_3.1.jpg";
-import product_03_image_02 from "../images/product_3.2.jpg";
-import product_03_image_03 from "../images/product_3.3.jpg";
+import product_03_image_01 from "../images/Gingers.PNG";
+import product_03_image_02 from "../images/GreenBeans.PNG";
+import product_03_image_03 from "../images/Broccolies.PNG";
 
-import product_04_image_01 from "../images/product_4.1.jpg";
-import product_04_image_02 from "../images/product_4.2.jpg";
+import product_04_image_01 from "../images/Cucumbers.PNG";
+import product_04_image_02 from "../images/Broccolies.PNG";
 import product_04_image_03 from "../images/product_4.3.png";
 
 // import product_05_image_01 from "../images/product_04.jpg";
@@ -38,36 +38,36 @@ const products = [
 
   {
     id: "02",
-    title: "Vegetarian Pizza",
-    price: 115.0,
+    title: "Banana",
+    price: 2.08,
     image01: product_02_image_01,
     image02: product_02_image_02,
     image03: product_02_image_03,
-    category: "Pizza",
+    category: "Vegetable",
     
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
 
   {
     id: "03",
-    title: "Double Cheese Margherita",
-    price: 110.0,
+    title: "Ginger",
+    price: 4.0,
     image01: product_03_image_01,
     image02: product_03_image_02,
     image03: product_03_image_03,
-    category: "Pizza",
+    category: "Vegetable",
     
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
 
   {
     id: "04",
-    title: "Maxican Green Wave",
-    price: 110.0,
+    title: "Cucumber",
+    price: 1.97,
     image01: product_04_image_01,
     image02: product_04_image_02,
     image03: product_04_image_03,
-    category: "Pizza",
+    category: "Vegetable",
     
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
@@ -97,36 +97,36 @@ const products = [
 
   {
     id: "07",
-    title: "Seafood Pizza",
-    price: 115.0,
+    title: "Carrot",
+    price: 3.98,
     image01: product_02_image_02,
     image02: product_02_image_01,
     image03: product_02_image_03,
-    category: "Pizza",
+    category: "Vegetable",
     
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
 
   {
     id: "08",
-    title: "Thin Cheese Pizza",
-    price: 110.0,
+    title: "Green Bean",
+    price: 2.47,
     image01: product_03_image_02,
     image02: product_03_image_01,
     image03: product_03_image_03,
-    category: "Pizza",
+    category: "Vegetable",
     
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
 
   {
     id: "09",
-    title: "Pizza With Mushroom",
-    price: 110.0,
+    title: "Broccoli",
+    price: 2.47,
     image01: product_04_image_02,
     image02: product_04_image_01,
     image03: product_04_image_03,
-    category: "Pizza",
+    category: "Vegetable",
     
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },

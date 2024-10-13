@@ -44,7 +44,7 @@
 }
 
 .container input:checked ~ .checkmark {
-  background-color: #df2020;
+  background-color: #1fec0c;
 }
 
 .checkmark:after {

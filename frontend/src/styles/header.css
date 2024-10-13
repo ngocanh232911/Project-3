@@ -18,9 +18,9 @@
   position: sticky;
   top: 0;
   left: 0;
-  background: #fff;
+  background: #d7ffcf;
   z-index: 99999;
-  box-shadow: 5px 5px 15px -5px #d7d6d6;
+  box-shadow: 5px 5px 15px -5px #a2ad9f;
   animation-name: animation;
   animation-duration: 0.5s;
 }
@@ -34,32 +34,32 @@
 }
 
 .logo img {
-  width: calc(100% - 60%);
+  width: calc(100% - 65%);
   object-fit: contain;
-  margin-top: -40px;
+  margin-top: -50px;
 }
 
 .logo h5 {
   font-weight: 600;
   font-size: 1rem;
-  color: #212245;
-  margin-top: -40px;
+  color: #0d8f29;
+  margin-top: -60px;
   margin-bottom: 0;
 }
 
 .menu a {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #212245;
   transition: 0.3s;
 }
 
 .menu a:hover {
-  color: #df2020;
+  color: #30df20;
 }
 
 .active__menu {
-  color: #df2020 !important;
+  color: #20df29 !important;
 }
 
 .cart__icon {
@@ -70,7 +70,7 @@
   position: absolute;
   top: 30px;
   right: -10px;
-  background: #df2020;
+  background: #1b2919;
   color: #fff;
   width: 15px;
   height: 15px;
@@ -113,7 +113,7 @@
     right: 0;
     width: 250px;
     height: 100%;
-    background: #fff;
+    background: #273624;
     flex-direction: column;
     justify-content: center;
     align-items: center;

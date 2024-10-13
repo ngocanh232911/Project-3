@@ -1,6 +1,6 @@
 .footer {
-  padding: 50px 0px;
-  background: #fde4e4;
+  padding: 20px 0px;
+  background: #d7ffcf;
   display: flex;
   text-align: start;
   justify-content: center;
@@ -14,14 +14,16 @@
 }
 
 .footer__logo h5 {
+  font-size: 1.0rem;
+  color: #0d8f29;
   font-weight: 600;
-  font-size: 1rem;
   margin-bottom: 15px;
 }
 
 .footer__logo p {
-  font-size: 0.9rem;
-  color: #333;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: hsl(0, 85%, 32%);
   line-height: 29px;
 }
 
@@ -34,17 +36,17 @@
 
 .delivery__time-item span {
   font-weight: 600;
-  color: #212245;
+  color: #aa0614;
   margin: 0;
 }
 
 .delivery__time-item p {
-  color: #212245;
+  color: #16992c;
 }
 
 .footer__title {
   font-size: 1.1rem;
-  color: #212245;
+  color: #0d8f29;
   font-weight: 600;
 }
 
