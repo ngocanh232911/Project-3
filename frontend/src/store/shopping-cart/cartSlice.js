@@ -139,7 +139,16 @@ const cartSlice = createSlice({
         state.totalQuantity
       );
     },
+
+    clearCart(state) {
+      state.cartItems = [];
+      state.totalQuantity = 0;
+      state.totalAmount = 0;
+      setItemFunc([], 0, 0); // Update localStorage
+    },
   },
+
+
 });
 
 export const cartActions = cartSlice.actions;

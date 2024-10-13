@@ -1,7 +1,17 @@
+import React, { useEffect } from "react";
 import "../styles/checkout.css";
 import { AiFillCheckCircle } from "react-icons/ai";
+import { useDispatch } from "react-redux";
+import { cartActions } from "../store/shopping-cart/cartSlice";
 
 const Checkout = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Clear the cart after checkout
+    dispatch(cartActions.clearCart());
+  }, [dispatch]);
+
   return (
     <>
       <div className="checkoutMessage">
