@@ -15,7 +15,7 @@ const nav__links = [
     path: "/home",
   },
   {
-    display: "Foods",
+    display: "Products",
     path: "/foods",
   },
   {
@@ -59,10 +59,14 @@ const Header = () => {
     <header className="header" ref={headerRef}>
       <Container>
         <div className="nav__wrapper d-flex align-items-center justify-content-between">
+          <Link to ="/home">
           <div className="logo">
             <img src={logoTrojanGreen} height ="180" width = "200" alt="logo" />
             <h5>Tasty Treat</h5>
           </div>
+          </Link>
+          
+        
 
           {/* ======= menu ======= */}
           <div className="navigation" ref={menuRef} onClick={toggleMenu}>

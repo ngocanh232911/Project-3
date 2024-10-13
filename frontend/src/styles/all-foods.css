@@ -27,3 +27,12 @@
     font-size: 0.8rem;
   }
 }
+
+.search__widget input {
+  z-index: 1; /* Ensure input field is clickable */
+  width: 100%; /* Ensure it takes the available space */
+}
+
+.search__widget span {
+  z-index: 0; /* Make sure the icon doesn’t cover the input */
+}

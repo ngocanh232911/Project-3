@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/common-section/CommonSection";
 
@@ -13,31 +13,55 @@ import "../styles/pagination.css";
 
 const AllFoods = () => {
   const [searchTerm, setSearchTerm] = useState("");
-
+  const [sortOption, setSortOption] = useState("default");
   const [pageNumber, setPageNumber] = useState(0);
 
-  const searchedProduct = products.filter((item) => {
-    if (searchTerm.value === "") {
-      return item;
+  // Corrected search and sort logic
+  const searchedProduct = useMemo(() => {
+    let filteredProducts = products.filter((item) => {
+      // If searchTerm is empty, return all products
+      if (searchTerm.trim() === "") return true;
+
+      // Otherwise, return products with titles containing searchTerm
+      return item.title.toLowerCase().includes(searchTerm.toLowerCase());
+    });
+
+    // Sorting logic based on sortOption
+    switch (sortOption) {
+      case "ascending":
+        filteredProducts.sort((a, b) => a.title.localeCompare(b.title));
+        break;
+      case "descending":
+        filteredProducts.sort((a, b) => b.title.localeCompare(a.title));
+        break;
+      case "high-price":
+        filteredProducts.sort((a, b) => b.price - a.price);
+        break;
+      case "low-price":
+        filteredProducts.sort((a, b) => a.price - b.price);
+        break;
+      default:
+        // Default sorting (could be based on ID or any default logic)
+        filteredProducts.sort((a, b) => a.id - b.id);
+        break;
     }
-    if (item.title.toLowerCase().includes(searchTerm.toLowerCase())) {
-      return item;
-    } else {
-      return console.log("not found");
-    }
-  });
+
+    return filteredProducts;
+  }, [searchTerm, sortOption]);
 
   const productPerPage = 12;
   const visitedPage = pageNumber * productPerPage;
-  const displayPage = searchedProduct.slice(
-    visitedPage,
-    visitedPage + productPerPage
-  );
+  const displayPage = searchedProduct.slice(visitedPage, visitedPage + productPerPage);
 
   const pageCount = Math.ceil(searchedProduct.length / productPerPage);
 
   const changePage = ({ selected }) => {
     setPageNumber(selected);
+  };
+
+  const handleSortChange = (e) => {
+    setSortOption(e.target.value);
+    setPageNumber(0); // Reset to the first page when sort option changes
   };
 
   return (
@@ -47,23 +71,30 @@ const AllFoods = () => {
       <section>
         <Container>
           <Row>
+            {/* Search Bar */}
             <Col lg="6" md="6" sm="6" xs="12">
-              <div className="search__widget d-flex align-items-center justify-content-between ">
+              <div className="search__widget d-flex align-items-center justify-content-between">
                 <input
                   type="text"
                   placeholder="I'm looking for...."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
-                <span>
-                  <i class="ri-search-line"></i>
+                <span onClick={() => console.log("Searching for: ", searchTerm)}>
+                  <i className="ri-search-line"></i>
                 </span>
               </div>
             </Col>
+
+            {/* Sort Dropdown */}
             <Col lg="6" md="6" sm="6" xs="12" className="mb-5">
               <div className="sorting__widget text-end">
-                <select className="w-50">
-                  <option>Default</option>
+                <select
+                  className="w-50"
+                  value={sortOption}
+                  onChange={handleSortChange} // Handle sort changes
+                >
+                  <option value="default">Default</option>
                   <option value="ascending">Alphabetically, A-Z</option>
                   <option value="descending">Alphabetically, Z-A</option>
                   <option value="high-price">High Price</option>
@@ -72,19 +103,29 @@ const AllFoods = () => {
               </div>
             </Col>
 
-            {displayPage.map((item) => (
-              <Col lg="3" md="4" sm="6" xs="6" key={item.id} className="mb-4">
-                <ProductCard item={item} />
+            {/* Display Product Cards */}
+            {displayPage.length === 0 ? (
+              <Col>
+                <h5>No products found.</h5>
               </Col>
-            ))}
+            ) : (
+              displayPage.map((item) => (
+                <Col lg="3" md="4" sm="6" xs="6" key={item.id} className="mb-4">
+                  <ProductCard item={item} />
+                </Col>
+              ))
+            )}
 
+            {/* Pagination */}
             <div>
               <ReactPaginate
                 pageCount={pageCount}
                 onPageChange={changePage}
                 previousLabel={"Prev"}
                 nextLabel={"Next"}
-                containerClassName=" paginationBttns "
+                containerClassName="paginationBttns"
+                activeClassName="active"
+                disabledClassName="disabled"
               />
             </div>
           </Row>

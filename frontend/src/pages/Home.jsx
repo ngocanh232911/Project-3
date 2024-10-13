@@ -17,7 +17,7 @@ const Home = () => {
               <div className="hero__content">
                 <h5 className="mb-3">Easy order & fast delivery</h5>
                 <h1 className="mb-4 hero__title">
-                  <span>Let's</span> enjoy my Pizza
+                  <span>Eat Veggie,</span> Save the Planet
                 </h1>
 
                 <button className="order__btn d-flex align-items-center justify-content-between ">
